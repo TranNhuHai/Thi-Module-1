@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tryRemoveFromArray</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, n) {
+        for(let i = 0; i < arr.length - 1; i++){
+            if(arr[i] === n){
+                arr.splice(i, 1);
+            }
+        }return arr;
+    }
+    let arrNumber = [12,6,3,7,21,5,7];
+ //lan luot thu voi mang arrNumber va cac so n la: 2 ;12;7
+    tryRemoveFromArray(arrNumber, 2);
+    alert(arrNumber);
+    let arrNumber1 = [12,6,3,7,21,5,7]
+    tryRemoveFromArray(arrNumber1, 12);
+    alert(arrNumber1);
+    let arrNumber2 = [12,6,3,7,21,5,7]
+    tryRemoveFromArray(arrNumber2,7);
+    alert(arrNumber2);
+    let arrNumber3 = [12,6,3,4,21,5,7];
+    tryRemoveFromArray(arrNumber3,7);
+    alert(arrNumber3);
+</script>
+</body>
+</html>

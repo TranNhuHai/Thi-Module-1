@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rec tangle</title>
+</head>
+<body>
+<canvas id = rectangleCanvas height="window.height" width="window.width"></canvas>
+<script>
+    let Rectangle = function (x, y, width, height, color) {
+                this.posX = x;
+                this.posY = y;
+                this.width = width;
+                this.height = height;
+                this.color = color;
+                this.render = function () {
+                    let ctx=document.getElementById("rectangleCanvas").getContext("2d");
+                    ctx.beginPath();
+                    ctx.color = this.color;
+                    ctx.fillRect(this.posX, this.posY, this.width, this.height);
+                };
+    };
+    let rec = new Rectangle(10,10,200,100, "#000000");
+    rec.render();
+</script>
+</body>
+</html>
